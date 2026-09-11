@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hud" class="hidden">
+        <div id="anchor">
+            <div id="scale">
+                <div class="hud-shell" id="hudShell">
+                    <button class="edit-handle move-handle" id="moveHandle" aria-label="Move HUD" title="Move HUD">✥</button>
+                    <button class="edit-handle resize-handle" id="resizeHandle" aria-label="Resize HUD" title="Resize HUD">↗</button>
+                    <button class="edit-handle reset-handle" id="resetHandle" aria-label="Reset HUD" title="Reset HUD">↻</button>
+                    <button class="edit-handle visibility-handle" id="visibilityHandle" aria-label="Show or hide HUD" title="Show / hide HUD"><span id="visibilityIcon">◉</span></button>
+                    <button class="edit-handle limiter-handle" id="limiterHandle" aria-label="Speed limiter" title="Speed limiter">LIM</button>
+
+                    <div class="limiter-panel" id="limiterPanel">
+                        <button class="limiter-switch" id="limiterToggle" title="Enable / disable limiter" aria-label="Enable or disable speed limiter"><span id="limiterToggleText">OFF</span></button>
+                        <button class="limiter-adjust" id="limiterMinus" title="Decrease limiter">−</button>
+                        <div class="limiter-value"><b id="limiterValue">130</b><span id="limiterUnit">KM/H</span></div>
+                        <button class="limiter-adjust" id="limiterPlus" title="Increase limiter">+</button>
+                    </div>
+
+                    <div class="hud">
+                        <div class="main">
+                            <div class="gear" id="gear">N</div>
+                            <div class="speedwrap">
+                                <div class="speed" id="speed">0</div>
+                                <div class="unit" id="unit">KM/H</div>
+                            </div>
+                        </div>
+                        <div class="rpm"><div class="rpmfill" id="rpmfill"></div></div>
+                        <div class="meta">
+                            <span id="fuelItem"><span id="fuelIcon">⛽</span> <b id="fuel">100%</b></span><i></i>
+                            <span id="tempItem">♨ <b id="temp">90°C</b></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
